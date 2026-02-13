@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student OS – Academic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="app-title">Student OS</h1>
+                    <div class="semester-badge">
+                        <span class="badge-text">2025/2026 · Even Semester · Class A</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-container">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search courses or lecturers..."
+                            autocomplete="off"
+                        >
+                        <span class="search-hint">Press / to focus</span>
+                    </div>
+                    <div class="credits-display">
+                        <span class="credits-label">Total Credits</span>
+                        <span class="credits-value" id="totalCredits"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard" id="dashboard">
+            <div class="dashboard-grid" id="dashboardGrid">
+                <!-- Days will be injected here -->
+            </div>
+        </main>
+
+        <!-- Course Detail Modal -->
+        <div class="detail-overlay" id="detailOverlay">
+            <div class="detail-modal" id="detailModal">
+                <button class="detail-close" id="detailClose" aria-label="Close detail view">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <div class="detail-header">
+                    <h2 class="detail-title" id="detailTitle">Course Title</h2>
+                    <div class="detail-meta">
+                        <span class="detail-meta-item" id="detailCredits">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>3 Credits</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="detail-body">
+                    <div class="detail-info-grid">
+                        <div class="info-card">
+                            <div class="info-label">Lecturer</div>
+                            <div class="info-value" id="detailLecturer">Prof. Name</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Schedule</div>
+                            <div class="info-value" id="detailSchedule">Mon, 13:00–15:30</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Room</div>
+                            <div class="info-value" id="detailRoom">FAH 4.17</div>
+                        </div>
+                    </div>
+
+                    <div class="notes-section">
+                        <div class="notes-header">
+                            <h3 class="notes-title">Course Notes</h3>
+                            <div class="notes-meta">
+                                <span class="word-count" id="wordCount">0 words</span>
+                                <span class="last-saved" id="lastSaved"></span>
+                            </div>
+                        </div>
+                        <textarea 
+                            class="notes-editor" 
+                            id="notesEditor" 
+                            placeholder="Start typing your notes here... (Press N to focus)"
+                        ></textarea>
+                        <div class="notes-hint">
+                            Notes are auto-saved to your browser
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keyboard Shortcuts Info -->
+        <div class="shortcuts-info">
+            <kbd>/</kbd> Search
+            <kbd>N</kbd> Notes
+            <kbd>Esc</kbd> Close
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
