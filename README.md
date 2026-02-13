@@ -14,43 +14,6 @@ A production-ready academic dashboard for managing course schedules, with integr
 - **Local Persistence**: Notes saved automatically to browser localStorage
 - **Zero Dependencies**: Pure vanilla JavaScript, no frameworks
 
-## 🎯 Quick Start
-
-### Option 1: Local Development
-
-1. Clone or download this repository
-2. Open `index.html` in a modern web browser
-3. That's it! No build process needed.
-
-### Option 2: Deploy to GitHub Pages
-
-1. **Create a new GitHub repository**
-   - Go to github.com and create a new repository
-   - Name it anything you like (e.g., `student-os`)
-   - Make it public or private
-
-2. **Upload your files**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages**
-   - Go to your repository settings
-   - Navigate to "Pages" in the left sidebar
-   - Under "Source", select "main" branch
-   - Click "Save"
-   - Your site will be live at: `https://YOUR_USERNAME.github.io/YOUR_REPO/`
-
-4. **Access your dashboard**
-   - Wait 1-2 minutes for GitHub to build your site
-   - Visit the URL provided in the Pages settings
-   - Bookmark it for easy access
-
 ## 📁 Project Structure
 
 ```
